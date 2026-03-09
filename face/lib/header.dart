@@ -13,6 +13,11 @@ class Header extends StatelessWidget {
         decoration: BoxDecoration(
           color: Color.fromARGB(255, 56, 65, 242),
         ),
+        child: Row(
+          children: [
+            Image(image: AssetImage('assets/images/facebook.png'), height: 30),
+          ],
+        ),
       ),
     );
   }
