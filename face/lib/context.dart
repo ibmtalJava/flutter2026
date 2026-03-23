@@ -1,4 +1,4 @@
-import 'package:face/gallery.dart';
+import 'package:face/sharing.dart';
 import 'package:flutter/material.dart';
 
 class Content extends StatelessWidget {
@@ -13,12 +13,15 @@ class Content extends StatelessWidget {
             child: Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 212, 212, 235),
+                  color: Color.fromARGB(255, 255, 255, 255),
                 ),
                 child: Align(
                   alignment: Alignment.center,
                   child: Column(
-                    children: [Gallery()],
+                    children: [
+                      Sharing("", "Muzaffer Övün", 10, 15, 50, 3),
+                      Sharing("", "Avcı Ahmet", 10, 15, 50, 3),
+                    ],
                   ),
                 )),
           )),
