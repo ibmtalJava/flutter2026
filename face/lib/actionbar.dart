@@ -1,3 +1,5 @@
+import 'package:face/mainpage.dart';
+import 'package:face/profile.dart';
 import 'package:flutter/material.dart';
 
 class ActionBar extends StatelessWidget {
@@ -15,11 +17,26 @@ class ActionBar extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Image(
-              image: AssetImage('assets/images/home.png'),
-              height: 30,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => MainPage()));
+              },
+              child: Image(
+                  image: AssetImage('assets/images/home.png'), height: 30),
             ),
-            Image(image: AssetImage('assets/images/like.png'), height: 30),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => Profile()));
+              },
+              child: Image(
+                  image: AssetImage('assets/images/like.png'), height: 30),
+            ),
             Image(image: AssetImage('assets/images/more.png'), height: 30),
             Image(image: AssetImage('assets/images/instagram.png'), height: 30),
           ],

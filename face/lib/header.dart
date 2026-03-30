@@ -1,3 +1,4 @@
+import 'package:face/mainpage.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
@@ -15,7 +16,16 @@ class Header extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Image(image: AssetImage('assets/images/facebook.png'), height: 30),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => MainPage()));
+              },
+              child: Image(
+                  image: AssetImage('assets/images/facebook.png'), height: 30),
+            ),
           ],
         ),
       ),
